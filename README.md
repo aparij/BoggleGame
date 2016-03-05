@@ -1,2 +1,2 @@
 # BoggleGame
-A service to generate list of words for a  boggle game 
+A service to generate a list of words for a boggle game 

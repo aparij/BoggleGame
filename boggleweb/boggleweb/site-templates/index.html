@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+    {% include 'base.html' %}
+
+    <body>
+    <div class="container">
+    <h3>Enter a sequence of letters without spaces, (left to right, top to bottome) of 4x4 or 5x5 Boggle Board </h3>
+
+    <form action="/get-words" method="post">
+         {% csrf_token %}
+        <label for="letters">Enter your Boggle letters: </label>
+        <input id="letters" type="text" name="letters">
+        <input type="submit" value="Get Words">
+    </form>
+
+	</div>
+    </body>
+</html>

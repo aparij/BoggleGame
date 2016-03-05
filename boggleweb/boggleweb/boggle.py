@@ -11,9 +11,7 @@ class Boggle:
     def get_permutations(self,s):
         all_s_perms = []
         length_of_perms = range(3,len(s)+1)
-
         for l in length_of_perms:
-            print l
             all_s_perms.extend([''.join(p) for p in permutations(s,l)])
         return all_s_perms
 
@@ -21,7 +19,6 @@ class Boggle:
         possible_words = set()
         for s in self.generate_strings():
             all_perms = self.get_permutations(s)
-            print s
             #print all_perms
             for permutation in all_perms:
                 if self.is_valid_word(permutation):
@@ -101,7 +98,6 @@ class Boggle:
 
 
     def is_valid_word(self,s):
-
         return self.dictionary.check(s)
 
 
@@ -110,10 +106,3 @@ class Boggle:
         for row in self.grid:
             r += str(row) + '\n'
         return r
-
-#TODO how to handle Qu
-game = Boggle('BDEJKORSWYUTNTIS',4)
-print game
-#print game.generate_strings()
-print game.get_all_possible_words()
-

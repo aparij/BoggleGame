@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+    {% include 'base.html' %}
+
+    <body>
+    <div class="container">
+
+        <table class="table">
+                {% for w in words %}
+                <tr>
+                    <th>{{ w }}</th>
+                </tr>
+                {% endfor %}
+        </table>
+	</div>
+    </body>
+</html>
